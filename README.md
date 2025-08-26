@@ -30,18 +30,31 @@ npm install
 npm start
 ```
 
-🚀 Usage
+## 🚀 Usage
+1. Input a valid **NFA** in JSON format in the textarea.  
+2. Click **"Convert & Visualize"** to generate and display the DFA graph.  
+3. Interact with the graph to explore states and transitions.  
 
-Input a valid NFA in JSON format in the textarea.
+---
 
-Click "Convert & Visualize" to generate and display the DFA graph.
+## 🛠️ Technologies
+- **React** – Frontend framework for building the UI.  
+- **Cytoscape.js** – Graph visualization library for rendering the DFA.  
+- **JavaScript** – Core logic for NFA-to-DFA conversion.  
 
-Interact with the graph to explore states and transitions.
+---
 
-🛠️ Technologies
+## 📖 Example NFA Input
 
-React – Frontend framework for building the UI.
-
-Cytoscape.js – Graph visualization library for rendering the DFA.
-
-JavaScript – Core logic for NFA-to-DFA conversion.
+```json
+{
+  "states": ["q0", "q1", "q2"],
+  "alphabet": ["0", "1"],
+  "startState": "q0",
+  "finalStates": ["q2"],
+  "transitions": {
+    "q0": { "0": ["q0", "q1"], "1": ["q0"] },
+    "q1": { "1": ["q2"] },
+    "q2": {}
+  }
+}
