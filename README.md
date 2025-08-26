@@ -1,13 +1,36 @@
-NFA to DFA VisualizerThis project is a web-based tool built with React and Cytoscape.js to convert a Non-deterministic Finite Automaton (NFA) to a Deterministic Finite Automaton (DFA) and visualize the resulting DFA graph. Users can input an NFA in JSON format, and the application converts it to a DFA using the subset construction algorithm, then displays the DFA as an interactive graph.FeaturesNFA Input: Input an NFA via a JSON-formatted textarea, specifying states, alphabet, transitions, start state, and final states.
-Conversion: Utilizes the convertNFAtoDFA function to transform the NFA into a DFA.
-Visualization: Renders the DFA as a directed graph using Cytoscape.js, with distinct styling for start and final states.
-Error Handling: Validates JSON input and NFA format, displaying errors for invalid inputs.
+NFA to DFA VisualizerA React-based web application that converts a Non-deterministic Finite Automaton (NFA) to a Deterministic Finite Automaton (DFA) and visualizes the resulting DFA using Cytoscape.js. Users can input an NFA in JSON format, and the tool performs the conversion using the subset construction algorithm, displaying the DFA as an interactive graph.FeaturesNFA Input: Enter NFA details (states, alphabet, transitions, start state, final states) in JSON format via a textarea.
+NFA to DFA Conversion: Implements the subset construction algorithm to convert NFAs to DFAs.
+Visualization: Displays the DFA as a directed graph with Cytoscape.js, highlighting start and final states with distinct styles.
+Error Handling: Validates JSON input and NFA structure, showing error messages for invalid formats.
 
-InstallationClone the repository: git clone <repository-url>
+InstallationClone the repository: git clone https://github.com/jeevanms003/NFA-to-DFA-visualizer.git
+Navigate to the project directory: cd NFA-to-DFA-visualizer
 Install dependencies: npm install
 Start the development server: npm start
 
-UsageEnter a valid NFA in JSON format in the provided textarea and click "Convert & Visualize" to see the DFA graph.TechnologiesReact
-Cytoscape.js
-JavaScript
+UsageInput a valid NFA in JSON format in the textarea.
+Click "Convert & Visualize" to generate and display the DFA graph.
+Interact with the graph to explore states and transitions.
+
+TechnologiesReact: Frontend framework for building the UI.
+Cytoscape.js: Graph visualization library for rendering the DFA.
+JavaScript: Core logic for NFA-to-DFA conversion.
+
+Example NFA Inputjson
+
+{
+  "states": ["q0", "q1", "q2"],
+  "alphabet": ["0", "1"],
+  "startState": "q0",
+  "finalStates": ["q2"],
+  "transitions": {
+    "q0": { "0": ["q0", "q1"], "1": ["q0"] },
+    "q1": { "1": ["q2"] },
+    "q2": {}
+  }
+}
+
+ContributingContributions are welcome! Fork the repository, make changes, and submit a pull request.
+
+
 
