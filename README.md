@@ -1,12 +1,13 @@
-# React + Vite
+NFA to DFA VisualizerThis project is a web-based tool built with React and Cytoscape.js to convert a Non-deterministic Finite Automaton (NFA) to a Deterministic Finite Automaton (DFA) and visualize the resulting DFA graph. Users can input an NFA in JSON format, and the application converts it to a DFA using the subset construction algorithm, then displays the DFA as an interactive graph.FeaturesNFA Input: Input an NFA via a JSON-formatted textarea, specifying states, alphabet, transitions, start state, and final states.
+Conversion: Utilizes the convertNFAtoDFA function to transform the NFA into a DFA.
+Visualization: Renders the DFA as a directed graph using Cytoscape.js, with distinct styling for start and final states.
+Error Handling: Validates JSON input and NFA format, displaying errors for invalid inputs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+InstallationClone the repository: git clone <repository-url>
+Install dependencies: npm install
+Start the development server: npm start
 
-Currently, two official plugins are available:
+UsageEnter a valid NFA in JSON format in the provided textarea and click "Convert & Visualize" to see the DFA graph.TechnologiesReact
+Cytoscape.js
+JavaScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
